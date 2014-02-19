@@ -1,0 +1,6 @@
+#map
+
+= content_for(:page_script) do
+  :javascript
+    L.Icon.Default.imagePath = "/assets";
+    App.Controllers.Search.addGridData(#{@geohash_data.to_json});
