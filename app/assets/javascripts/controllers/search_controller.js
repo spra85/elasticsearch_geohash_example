@@ -32,7 +32,7 @@
   },
 
   initEventHandlers: function() {
-    this.map.on("click", this.handleMapClick);
+    //this.map.on("click", this.handleMapClick);
   },
 
   handleMapClick: function(event) {
@@ -42,12 +42,18 @@
   addGridData: function(geoData) {
     var _this = this;
     _.each(geoData, function(gridObject){
-      _this.addPolygon(gridObject.coordinates);
+      _this.addPolygon(gridObject);
     });
   },
 
-  addPolygon: function(coordinates) {
-    var polygon = L.polygon(coordinates);
+  addPolygon: function(gridObject) {
+    var _this = this;
+    var polygon = L.polygon(gridObject.coordinates);
+    debugger
+
+    polygon.on("click", function(event) {
+      _this.popup.setLatLng(event.latlng).setContent("Border contains " + gridObject.count + " zip codes").openOn(_this.map);
+    });
     this.polygons.addLayer(polygon);
   }
 }).initialize();
