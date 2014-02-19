@@ -1,4 +1,5 @@
-== Zip Code Example
+Zip Code Example
+=====================
 
 ## Getting Started
 
@@ -33,7 +34,7 @@ Using Zip Code database from [PopularData.com](http://www.populardata.com/downlo
 
 Loads ~ 42,741 zip codes
 
-Example record: 
+Example record:
 
 ```
  {
