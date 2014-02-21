@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "2.1.0"
 
-gem "rails", "4.0.2"
+gem "rails", "4.0.3"
 
 gem "awesome_print"
 gem "elasticsearch-model", git: "git://github.com/elasticsearch/elasticsearch-rails.git"
