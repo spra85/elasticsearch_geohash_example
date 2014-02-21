@@ -1,3 +1,3 @@
 log: tail -f log/development.log
-search: elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
+search: elasticsearch -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
 postgres: postgres -D /usr/local/var/postgres
